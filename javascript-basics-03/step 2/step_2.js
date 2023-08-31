@@ -1,9 +1,14 @@
-let show = document.getElementById("show");
-let hide = document.getElementById("hide");
+let link = document.getElementsByTagName('a')
 let text = document.getElementById("texte");
-hide.addEventListener("click",()=>{
-    text.style.display="none"
-})
-show.addEventListener("click",()=>{
-    text.style.display="block"
-})
+for (let i = 0; i < 2; i++) {
+    link[i].addEventListener("click", () => {
+        if (link[i].id == "show") { text.style.display = "block" }
+        else { text.style.display = "none" }
+    })
+}
+
+
+
+
+
+
